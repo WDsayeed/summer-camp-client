@@ -5,11 +5,11 @@ const Header = () => {
         const navOption = (
                 <>
                 <li><Link to='/'>Home</Link></li>
-                <li><Link to='/'>Home</Link></li>
-                <li><Link to='/'>Home</Link></li>
-                <li><Link to='/'>Home</Link></li>
-                <li><Link to='/'>Home</Link></li>
-                <li><Link to='/'>Home</Link></li>
+                <li><Link to='/instructor'>Instructor</Link></li>
+                <li><Link to='/classes'>Classes</Link></li>
+                <li><Link to='/dashboard'>Dashboard</Link></li>
+                <li><Link to='/register'>Register</Link></li>
+                <li><Link to='/'>todo</Link></li>
                 </>
         )
   return (
@@ -39,7 +39,7 @@ const Header = () => {
             {navOption}
           </ul>
         </div>
-        <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+        <Link to='/' className="font-semibold text-xl">Global Language Hub</Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
@@ -47,7 +47,7 @@ const Header = () => {
         </ul>
       </div>
       <div className="navbar-end">
-        <a className="btn">Button</a>
+        <a className="btn">Login</a>
       </div>
     </div>
   );
