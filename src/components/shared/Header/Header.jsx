@@ -30,9 +30,6 @@ const Header = () => {
       <li>
         <Link to="/register">Register</Link>
       </li>
-      <li>
-        <Link to="/">todo</Link>
-      </li>
     </>
   );
   return (
