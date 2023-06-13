@@ -43,7 +43,7 @@ const PaymentHistory = () => {
                             <div className="avatar">
                               <div className="mask mask-squircle w-12 h-12">
                                 <img
-                                  src={cls.photo}
+                                  src={cls.itemPhoto}
                                   alt=""
                                 />
                               </div>

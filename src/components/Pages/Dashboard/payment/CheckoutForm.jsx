@@ -28,10 +28,7 @@ const CheckoutForm = ({ id }) => {
       });
   }, [id]);
 
-  // console.log(selectedData)
-  // console.log(selectedClass)
   const { price } = selectedData;
-  // console.log(price);
 
   useEffect(() => {
     if (price > 0) {
@@ -96,7 +93,8 @@ const CheckoutForm = ({ id }) => {
         orderStatus: 'service pending',
         items: selectedData._id,
         classItem: selectedData.classId,
-        itemName: selectedData.name
+        itemName: selectedData.name,
+        itemPhoto: selectedData.photo
         }
 
         axiosSecure.post('/payments', payment)

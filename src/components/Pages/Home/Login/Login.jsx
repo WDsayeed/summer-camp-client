@@ -2,14 +2,15 @@ import { useContext } from "react";
 import { AuthContext } from "../../../provider/AuthProvider";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import SocialLogin from "../../../socialLogin/SocialLogin";
+import useTitle from "../../../../hooks/useTitle";
 
 const Login = () => {
   const { signIn } = useContext(AuthContext);
   const navigate = useNavigate();
   const location = useLocation();
-
+ 
   const from = location.state?.from?.pathname || "/";
-
+ useTitle('Login')
   const handleLogin = (event) => {
     event.preventDefault();
     const form = event.target;
