@@ -3,13 +3,20 @@
 // import img1 from '../../../../assets/images/banner1.jpg'
 // import img2 from '../../../../assets/images/banner2.jpg'
 // import img3 from '../../../../assets/images/banner3.jpg'
-import bannerImg from '../../../../assets/images/banner.jpg'
+import bannerImg from "../../../../assets/images/banner.jpg";
 
 const Banner = () => {
   return (
-
-    <div>
+    <div className="">
       <img src={bannerImg} alt="" />
+      <div className="-mt-72 mb-96 text-white  text-center">
+        <h1 className="text-5xl">Learn a Language</h1>
+        <p className="my-5">
+          Learn a language right here with hundreds of free language-learning
+          lessons. <br />  Join us and have some fun.
+        </p>
+        <button className="btn btn-accent">Start learning now</button>
+      </div>
     </div>
     // <Carousel>
     //   <div>

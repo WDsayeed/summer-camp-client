@@ -1,0 +1,62 @@
+[
+        { 
+              "image":"https://ibb.co/kB6F6qF",  
+              "name":"English",
+              "instructorName":"Dowry Vector",
+              "availableSeats":20,
+              "price":500,
+              "student_Num":100
+        },
+        { 
+              "image":"https://ibb.co/JQdq53c",  
+              "name":"Arabic",
+              "instructorName":"Sheikh Abdullah",
+              "availableSeats":30,
+              "price":550,
+              "student_Num":200
+
+        },
+        { 
+              "image":"https://ibb.co/kB6F6qF",  
+              "name":"Hindi",
+              "instructorName":"Gowtom Vottacharjo",
+              "availableSeats":25,
+              "price":500,
+              "student_Num":150
+
+        },
+        { 
+              "image":"https://ibb.co/nmPppKc",  
+              "name":"Urdu",
+              "instructorName":"Abdullah Inan",
+              "availableSeats":20,
+              "price":400,
+              "student_Num":120
+
+        },
+        { 
+              "image":"https://ibb.co/XDDxzFy",  
+              "name":"Japanese",
+              "instructorName":"Kenzo",
+              "availableSeats":30,
+              "price":500,
+              "student_Num":130
+        },
+        { 
+              "image":"https://ibb.co/XzbfTBn",  
+              "name":"Spanish",
+              "instructorName":" Kemvaba",
+              "availableSeats":25,
+              "price":600,
+              "student_Num":210
+        },
+        { 
+              "image":"https://ibb.co/kB6F6qF",  
+              "name":"Korean",
+              "instructorName":"So-Yeon",
+              "availableSeats":20,
+              "price":500,
+              "student_Num":140
+        }
+
+]
