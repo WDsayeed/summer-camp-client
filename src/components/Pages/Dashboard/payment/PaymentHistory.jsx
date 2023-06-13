@@ -22,14 +22,12 @@ const PaymentHistory = () => {
                   <thead>
                     <tr>
                       <th>
-                        <label>
-                          <input type="checkbox" className="checkbox" />
-                        </label>
+                      #
                       </th>
-                      <th>Name</th>
-                      <th>Job</th>
-                      <th>Favorite Color</th>
-                      <th></th>
+                      <th className="text-end">Name</th>
+                      
+                      <th>Email</th>
+                      <th>Price</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -57,10 +55,8 @@ const PaymentHistory = () => {
                         <td>
                           {cls.email}
                         </td>
-                        <td>{cls.price}</td>
-                        <th>
-                          <button className="btn btn-ghost btn-xs">details</button>
-                        </th>
+                        <td className="text-end">${cls.price}</td>
+                  
                       </tr>
                     ))}
                   </tbody>
