@@ -23,7 +23,7 @@ const Register = () => {
       console.log(createdUser);
       updateUserProfile(data.name, data.photo)
         .then(() => {
-          const savedUser = { name: data.name, email: data.email };
+          const savedUser = { name: data.name, email: data.email, photo: data.photo };
           fetch("https://assignment-twelve-server-pearl.vercel.app/users", {
             method: "POST",
             headers: {

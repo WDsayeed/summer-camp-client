@@ -17,6 +17,7 @@ import MyClass from "../components/Pages/Dashboard/MyClass";
 import AdminRoute from "./AdminRoute";
 import Payment from "../components/Pages/Dashboard/payment/Payment";
 import PaymentHistory from "../components/Pages/Dashboard/payment/PaymentHistory";
+import DashboardLayout from "../components/Pages/Dashboard/DashboardLayout/DashboardLayout";
 
 export const router = createBrowserRouter([
   {
@@ -51,6 +52,10 @@ export const router = createBrowserRouter([
     path:'dashboard',
     element:<PrivateRoute><Dashboard></Dashboard></PrivateRoute>,
     children:[
+      {
+        path:'',
+        element:<DashboardLayout></DashboardLayout>
+      },
       {
         path:'myselectedclass',
         element:<MySelectedClasses></MySelectedClasses>

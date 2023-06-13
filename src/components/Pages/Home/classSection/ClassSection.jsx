@@ -10,8 +10,8 @@ const ClassSection = () => {
   }, []);
   return (
     <div className=" mt-64">
-      <h1>top class</h1>
-      <div className="grid md:grid-cols-3 gap-32">
+      <h1 className="text-4xl text-center mb-7">Popular class</h1>
+      <div className="grid md:grid-cols-3 gap-11">
       {classData.map((clsData) => <ClassData
       key={clsData._id}
       clsData={clsData}

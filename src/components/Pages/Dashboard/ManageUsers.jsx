@@ -16,7 +16,7 @@ const ManageUsers = () => {
   });
   console.log(users)
   const handleMakeAdmin= user=>{
-    setIsAdminDisable(true)
+    // setIsAdminDisable(true)
         fetch(`https://assignment-twelve-server-pearl.vercel.app/users/admin/${user._id}`,{
                 method:'PATCH'
         })
@@ -36,7 +36,7 @@ const ManageUsers = () => {
   }
 
   const handleMakeInstructor = user=>{
-    setIsInstructorDisable(true)
+    // setIsInstructorDisable(true)
     fetch(`https://assignment-twelve-server-pearl.vercel.app/users/instructor/${user._id}`,{
                 method:'PATCH'
         })
@@ -53,14 +53,35 @@ const ManageUsers = () => {
                               })
                 }
         })
-  }
-
-  const handleDelete = user =>{
 
   }
+
+  const handleDelete = (user) => {
+    Swal.fire({
+      title: `Do you want to delete ${user.name}?`,
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        fetch(`http://localhost:5000/userDelete/${user?._id}`, {
+          method: "DELETE",
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            if (data.deletedCount > 0) {
+              refetch();
+              Swal.fire("Deleted!", `Your work has been deleted.`, "success");
+            }
+          });
+      }
+    });
+  };
   return (
     <div className="w-full">
-      <h1>manageusers {users.length}</h1>
       <div className="overflow-x-auto  w-3/4 mx-auto">
         <table className="table">
           {/* head */}
@@ -86,7 +107,7 @@ const ManageUsers = () => {
                 
                 </td>
                 <td>
-                <button onClick={() => handleDelete(users)} className="btn btn-accent text-gray-600"><FaTrashAlt/></button>
+                <button onClick={() => handleDelete(user)} className="btn btn-accent text-gray-600"><FaTrashAlt/></button>
                 </td>
               </tr>
             ))}

@@ -11,9 +11,9 @@ const Classes = () => {
       .then((data) => setClassData(data));
   }, []);
   return (
-    <div className="max-w-screen-xl mx-auto">
-      <h1>Classes</h1>
-      <div className="grid md:grid-cols-3 gap-20">
+    <div className="max-w-screen-xl mx-auto py-24">
+      <h1 className="text-3xl text-center mb-7">Classes</h1>
+      <div className="grid md:grid-cols-3 gap-5">
         {classData.map((data) => (
           <ClassItem key={data._id} data={data}></ClassItem>
         ))}

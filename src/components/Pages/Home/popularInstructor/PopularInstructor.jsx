@@ -6,14 +6,21 @@ const PopularInstructor = () => {
         const [ instructors, setInstructors] = useState([])
 
         useEffect(()=>{
-                fetch('https://assignment-twelve-server-pearl.vercel.app/instructors')
+                // fetch('https://assignment-twelve-server-pearl.vercel.app/instructors')
+                // .then(res=> res.json())
+                // .then(data=> setInstructors(data))
+        
+                fetch('http://localhost:5000/allInstructors')
                 .then(res=> res.json())
-                .then(data=> setInstructors(data))
+                .then(data=> {
+                        setInstructors(data)
+                })
+        
         },[])
         return (
-                <div>
-                        <h1 className="text-4xl text-center">Instructors</h1>
-                      <div className="grid md:grid-cols-3 gap-28">
+                <div className="mt-20">
+                        <h1 className="text-4xl text-center mb-7">Popular Instructors</h1>
+                      <div className="grid md:grid-cols-3 gap-10">
                       {
                         instructors.map(instructor=> <InstructorData
                         key={instructor._id}
