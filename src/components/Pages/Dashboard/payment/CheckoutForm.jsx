@@ -78,7 +78,7 @@ const CheckoutForm = ({ id }) => {
       console.log(confirmError);
     }
 
-    console.log(paymentIntent);
+  
 
     setProcessing(false);
 
