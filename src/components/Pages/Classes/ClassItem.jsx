@@ -15,9 +15,6 @@ const ClassItem = ({ data }) => {
 
   const handleEnroll = ({data}) => {
     setIsDisable(true)
-    if(user.role === 'admin' || user.role==='instructor'){
-      
-    }
     const savedData = {
       classId: _id,
       name,
