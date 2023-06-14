@@ -15,7 +15,6 @@ const EnrolledClass = () => {
   return (
     <div className="overflow-x-auto">
       <table className="table">
-        {/* head */}
         <thead>
           <tr>
             <th>
