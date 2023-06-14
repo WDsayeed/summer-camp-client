@@ -4,18 +4,18 @@ import { Link, useRouteError } from 'react-router-dom';
 const ErrorPage = () => {
         const { error, status } = useRouteError()
         return (
-                <div className="flex items-center h-screen p-16 bg-[#E9EDC9] text-gray-900">
+                <div className="flex items-center h-screen p-16 bg-[#c6eeef] text-gray-900">
                 <div className="container flex flex-col items-center justify-center px-5 mx-auto my-8">
-                  <FaceFrownIcon className="w-40 h-40 text-[#99ad59]" />
+                  <FaceFrownIcon className="w-40 h-40 text-[#13d77c]" />
                   <div className="max-w-md text-center">
-                    <h2 className="mb-8 font-extrabold text-9xl text-[#536519]">
+                    <h2 className="mb-8 font-extrabold text-9xl text-[#024f34]">
                       <span className="sr-only">Error</span>
                       {status || 404}
                     </h2>
-                    <p className="text-2xl font-semibold md:text-3xl text-[#283402] mb-8">
+                    <p className="text-2xl font-semibold md:text-3xl text-[#046c89] mb-8">
                       {error?.message}
                     </p>
-                    <Link to="/" className="btn bg-[#445702]">
+                    <Link to="/" className="btn bg-[#25e3b1]">
                       Back to homepage
                     </Link>
                   </div>
