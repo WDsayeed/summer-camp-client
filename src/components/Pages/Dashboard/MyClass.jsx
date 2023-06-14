@@ -3,7 +3,7 @@ import useInstructorClass from "../../../hooks/useInstructorClass";
 
 const MyClass = () => {
   const [instructorClass] = useInstructorClass();
- const [totalStudent, setTotalStudent] = useState({})
+ const [ setTotalStudent] = useState({})
 
   useEffect(()=>{
     fetch('https://assignment-twelve-server-pearl.vercel.app/enrolled')
@@ -16,12 +16,8 @@ const MyClass = () => {
   return (
     <div className="overflow-x-auto">
 
-      
-      <div>
-        total student:{}
-      </div>
       <table className="table">
-        {/* head */}
+      
         <thead>
           <tr>
             <th>
