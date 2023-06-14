@@ -55,11 +55,11 @@ const Manageclasses = () => {
       });
   };
 
-//   const handleFeedback = () => {};
+
   return (
     <div className="overflow-x-auto">
       <table className="table">
-        {/* head */}
+  
         <thead>
           <tr className=" text-lg">
             <th>#</th>
