@@ -37,7 +37,7 @@ const MySelectedClasses = () => {
     <div className="overflow-x-auto w-3/4">
       <div className="w-full text-end"></div>
       <table className="table">
-        {/* head */}
+    
         <thead className="text-lg">
           <tr>
             <th>#</th>
