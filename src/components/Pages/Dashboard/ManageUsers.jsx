@@ -1,12 +1,9 @@
 import { useQuery } from "@tanstack/react-query";
-import { FaTrashAlt, FaUserShield } from "react-icons/fa";
+import { FaTrashAlt } from "react-icons/fa";
 import Swal from "sweetalert2";
 import UseAxiosSecure from "../../../hooks/UseAxiosSecure";
-import { useState } from "react";
 
 const ManageUsers = () => {
-  const [isAdminDisable, setIsAdminDisable] = useState(false);
-  const [isInstructorDisable, setIsInstructorDisable] = useState(false);
 
   const [axiosSecure] = UseAxiosSecure();
   const { data: users = [], refetch } = useQuery(["users"], async () => {
@@ -15,7 +12,7 @@ const ManageUsers = () => {
   });
   console.log(users);
   const handleMakeAdmin = (user) => {
-    // setIsAdminDisable(true)
+ 
     fetch(
       `https://assignment-twelve-server-pearl.vercel.app/users/admin/${user._id}`,
       {
@@ -38,7 +35,7 @@ const ManageUsers = () => {
   };
 
   const handleMakeInstructor = (user) => {
-    // setIsInstructorDisable(true)
+  
     fetch(
       `https://assignment-twelve-server-pearl.vercel.app/users/instructor/${user._id}`,
       {
