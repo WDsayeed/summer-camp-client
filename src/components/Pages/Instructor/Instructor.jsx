@@ -7,10 +7,7 @@ const Instructor = () => {
   useTitle('Instructor')
 
   useEffect(() => {
-    // fetch("https://assignment-twelve-server-pearl.vercel.app/instructors")
-    //   .then((res) => res.json())
-    //   .then((data) => setInstructors(data));
-    fetch('http://localhost:5000/allInstructors')
+    fetch('https://assignment-twelve-server-pearl.vercel.app/allInstructors')
     .then(res=> res.json())
     .then(data=> {
             setInstructors(data)

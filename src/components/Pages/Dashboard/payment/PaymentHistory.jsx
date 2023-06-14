@@ -9,7 +9,7 @@ const PaymentHistory = () => {
 
 
         useEffect(()=>{
-                fetch(`http://localhost:5000/paymentHistory/${user?.email}`)
+                fetch(`https://assignment-twelve-server-pearl.vercel.app/paymentHistory/${user?.email}`)
                 .then(res=> res.json())
                 .then(data=>{
                         setEnrollClass(data)
@@ -26,8 +26,9 @@ const PaymentHistory = () => {
                       </th>
                       <th className="text-end">Name</th>
                       
-                      <th>Email</th>
                       <th>Price</th>
+                      <th>Date</th>
+                      <th>TransactionId</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -52,10 +53,9 @@ const PaymentHistory = () => {
                             </div>
                           </div>
                         </td>
-                        <td>
-                          {cls.email}
-                        </td>
                         <td className="text-end">${cls.price}</td>
+                        <td className="text-end">{cls.date}</td>
+                        <td className="text-end">{cls.transactionId}</td>
                   
                       </tr>
                     ))}

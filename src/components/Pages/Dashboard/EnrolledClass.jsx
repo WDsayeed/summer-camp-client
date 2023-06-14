@@ -6,7 +6,7 @@ const EnrolledClass = () => {
   const [enrollClass, setEnrollClass] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/paymentHistory/${user?.email}`)
+    fetch(`https://assignment-twelve-server-pearl.vercel.app/paymentHistory/${user?.email}`)
       .then((res) => res.json())
       .then((data) => {
         setEnrollClass(data);
@@ -19,14 +19,11 @@ const EnrolledClass = () => {
         <thead>
           <tr>
             <th>
-              <label>
-                <input type="checkbox" className="checkbox" />
-              </label>
+            #
             </th>
             <th>Name</th>
-            <th>Job</th>
-            <th>Favorite Color</th>
-            <th></th>
+            <th>Email</th>
+            <th>Price</th>
           </tr>
         </thead>
         <tbody>
@@ -40,7 +37,7 @@ const EnrolledClass = () => {
                   <div className="avatar">
                     <div className="mask mask-squircle w-12 h-12">
                       <img
-                        src={cls.photo}
+                        src={cls.itemPhoto}
                         alt=""
                       />
                     </div>
@@ -54,10 +51,7 @@ const EnrolledClass = () => {
               <td>
                 {cls.email}
               </td>
-              <td>{cls.price}</td>
-              <th>
-                <button className="btn btn-ghost btn-xs">details</button>
-              </th>
+              <td className="text-end">${cls.price}</td>
             </tr>
           ))}
         </tbody>
