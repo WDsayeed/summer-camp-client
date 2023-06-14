@@ -53,7 +53,7 @@ const AddClass = () => {
   return (
     <form className="md:container w-3/4 mx-auto my-10" onSubmit={handleAddClass}>
       <h1 className="text-4xl text-center">
-        Add a course
+        Add a Course
       </h1>
       <div className="card-body grid md:grid-cols-2 gap-10">
         <div className="form-control ">
