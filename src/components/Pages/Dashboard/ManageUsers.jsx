@@ -120,7 +120,7 @@ const ManageUsers = () => {
                     <button
                       onClick={() => handleMakeInstructor(user)}
                       className="btn btn-secondary text-white"
-                      disabled={isInstructorDisable}
+              
                     >
                       Make instructor
                     </button>
