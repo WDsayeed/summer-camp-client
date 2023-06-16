@@ -108,7 +108,6 @@ const ManageUsers = () => {
                     <button
                       onClick={() => handleMakeAdmin(user)}
                       className="btn btn-secondary text-white"
-                      disabled={isAdminDisable}
                     >
                       Make admin
                     </button>
